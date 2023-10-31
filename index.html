@@ -25,6 +25,7 @@
         const domain = `https://${params.get("subdomain")}.qrveyapp.com`;
         const token = params.get("token");
         const app_id = params.get("app_id");
+        const user_id = params.get("user_id");
         const dashboard_id = params.get("dashboard_id");
 
         var custom_styles = `
@@ -90,7 +91,7 @@
         `;
 
         window['config'] = {
-            domain: domain, api_key: token, 
+            domain: domain, user_id: user_id, api_key: token, 
             dashboard_id: dashboard_id, app_id: app_id, 
             personalization: { enabled: true, add_filter: true, edit_page: true, edit_chart: true }, 
             "styles": {
